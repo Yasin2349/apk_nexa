@@ -1,0 +1,1 @@
+import{Hn as e,M as t,Xt as n}from"./CdBxMLbu.js";import{t as r}from"./DNbhttnY.js";import{a as i}from"./YayQCb-2.js";import{i as a}from"./Eu7GMGiP.js";function o(n){return t(()=>!e(n)||!!i(n)?.closest(`form`))}var s=0;function c(e,t=`reka`){if(e)return e;let i,o=a({useId:void 0});return i=o.useId?o.useId():`useId`in r?n?.():`${++s}`,t?`${t}-${i}`:i}export{o as n,c as t};

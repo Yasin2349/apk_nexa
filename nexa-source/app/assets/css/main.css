@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+html,
+body,
+#__nuxt {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  background: #020617;
+  color: #e5e7eb;
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: thin;
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.timer-number {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
+}

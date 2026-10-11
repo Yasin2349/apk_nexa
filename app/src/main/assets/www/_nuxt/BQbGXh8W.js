@@ -1,0 +1,1 @@
+import{$ as e}from"./CdBxMLbu.js";function t(){let t=e()?.vnode?.scopeId;return t?{[t]:``}:{}}export{t};

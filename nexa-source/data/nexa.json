@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "tasks": [],
+  "goals": [],
+  "projects": [],
+  "courses": [],
+  "schedule": [],
+  "focusSessions": [],
+  "studyMinutes": 0,
+  "dailyReports": [],
+  "notifications": [],
+  "settings": {
+    "lang": "fa",
+    "timezone": "Asia/Tehran",
+    "goal": 0,
+    "workStart": "",
+    "workEnd": "",
+    "notificationsEnabled": true,
+    "quietEnabled": false,
+    "quietStart": "",
+    "quietEnd": ""
+  }
+}
