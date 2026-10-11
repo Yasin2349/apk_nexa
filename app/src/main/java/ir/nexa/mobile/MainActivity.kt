@@ -44,6 +44,8 @@ class MainActivity : Activity() {
         web.settings.allowFileAccess = false
         web.settings.allowContentAccess = false
         web.settings.javaScriptCanOpenWindowsAutomatically = false
+        web.settings.textZoom = 100
+        web.settings.loadsImagesAutomatically = true
         web.settings.setSupportMultipleWindows(false)
         web.addJavascriptInterface(NexaBridge(this), "NexaNative")
         web.webViewClient = object : WebViewClient() {
@@ -131,6 +133,33 @@ class MainActivity : Activity() {
                     #nexa-mobile-bottom a.active{color:#6ee7b7}
                     header{padding-top:env(safe-area-inset-top)}
                   }
+                  /* Nexa Android: touch-first, readable mobile styling */
+                  :root{color-scheme:dark!important}
+                  html,body,#__nuxt{width:100%;min-height:100%;margin:0!important;background:#0b1120!important;color:#e5e7eb!important;direction:rtl!important;overflow-x:hidden!important}
+                  body{font-family:system-ui,-apple-system,sans-serif!important;font-size:15px!important;line-height:1.75!important;padding-bottom:calc(88px + env(safe-area-inset-bottom))!important;-webkit-text-size-adjust:100%}
+                  *,*:before,*:after{box-sizing:border-box}
+                  a{color:#a5b4fc;text-decoration:none!important} a:visited{color:#c4b5fd}
+                  button,[role=button],input,select,textarea{font:inherit!important;max-width:100%;touch-action:manipulation}
+                  input,select,textarea{min-height:44px!important;color:#f1f5f9!important;background:#111c30!important;border:1px solid #334155!important;border-radius:12px!important;padding:9px 12px!important}
+                  button,[role=button]{min-height:42px}
+                  main{min-width:0!important;width:100%!important;padding:14px!important;margin:0!important}
+                  main>div,main section{min-width:0;max-width:100%}
+                  [data-slot=root]{max-width:100%;border-radius:18px!important;border-color:rgba(148,163,184,.18)!important;background:#111b2d!important;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+                  [data-slot=header]{padding:14px 16px!important;color:#f8fafc!important}
+                  [data-slot=body]{padding:14px!important;color:#dbe4f0!important}
+                  h1{font-size:clamp(24px,6vw,32px)!important;line-height:1.4!important;color:#f8fafc!important;margin-block:12px 18px!important}
+                  h2{font-size:21px!important;line-height:1.45!important;color:#f8fafc!important} h3{font-size:17px!important;color:#f8fafc!important}
+                  p{line-height:1.9!important}
+                  .text-gray-500,.text-gray-600{color:#aab8cc!important}
+                  .bg-white,.bg-default{background:#111b2d!important}
+                  .text-black,.text-gray-900,.text-gray-950{color:#e5e7eb!important}
+                  .text-primary{color:#a5b4fc!important}
+                  .underline{text-decoration:none!important}
+                  #nexa-mobile-bottom{padding-bottom:calc(8px + env(safe-area-inset-bottom))!important}
+                  #nexa-mobile-bottom a{color:#94a3b8!important;text-decoration:none!important;font-size:11px!important;min-height:52px!important}
+                  #nexa-mobile-bottom a.active{color:#6ee7b7!important}
+                  #nexa-mobile-bottom a span:first-child{font-size:21px!important}
+                  @media(max-width:420px){main{padding:10px!important}[data-slot=body]{padding:12px!important}.grid{grid-template-columns:minmax(0,1fr)!important}.flex.items-center.gap-4{gap:10px!important;flex-wrap:wrap}h1{font-size:25px!important}}
                   @media(min-width:761px){#nexa-mobile-bottom{display:none!important}}
                 `;
                 document.head.appendChild(style);
