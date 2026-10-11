@@ -1,6 +1,7 @@
 package ir.nexa.mobile
 
 import android.Manifest
+import android.app.Activity
 import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -19,12 +20,11 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.graphics.Color
 import android.view.View
-import androidx.activity.ComponentActivity
 import org.json.JSONObject
 import java.io.ByteArrayInputStream
 import java.util.Locale
 
-class MainActivity : ComponentActivity() {
+class MainActivity : Activity() {
     private lateinit var web: WebView
     private val appHost = "appassets.androidplatform.net"
 
@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
                 var path = Uri.decode(uri.path ?: "/").trimStart('/')
                 if (path.isBlank()) path = "index.html"
                 if (path.contains("..")) return response("Not found", "text/plain", 404)
-                val assets = assets
+                val assets = this@MainActivity.assets
                 return try {
                     val stream = assets.open("www/$path")
                     response(stream, mime(path), 200)
